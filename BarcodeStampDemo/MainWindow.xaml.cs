@@ -34,6 +34,7 @@ namespace BarcodeStampDemo
         {
             // Generate Barcode Image
             Barcode barcode = new Barcode();
+            barcode.LabelFont = new Font("Arial", 10 * 96f / 72, System.Drawing.FontStyle.Regular, GraphicsUnit.Pixel);
             barcode.IncludeLabel = true;
             barcode.Alignment = AlignmentPositions.CENTER;
             var barcodeImage = barcode.Encode(TYPE.CODE128A, "1234567890", System.Drawing.Color.Black, System.Drawing.Color.White, 160, 50);
